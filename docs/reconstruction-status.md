@@ -1,13 +1,40 @@
-# Reconstruction status
+# Reconstruction Status
 
-| Item | Status |
-|---|---|
-| Runtime bytecode | Archived (`archive/runtime-bytecode.hex`) |
-| Creation input (init code + constructor args) | Archived (`archive/creation-input.hex`) |
-| Token metadata via RPC | Archived and verified (`archive/rpc-reads.json`) |
-| Verified source on Etherscan | Not established by this archive |
-| Original source text / compiler version | Unknown |
-| License | Unknown |
-| ABI | Not included. Function selectors observed in bytecode: `name`, `approve`, `totalSupply`, `transferFrom`, `decimals`, `version`, `balanceOf`, `symbol`, `transfer`, `approveAndCall`, `allowance` |
+## Current status
 
-Any reconstructed Solidity or ABI must be labelled as reconstruction and must not be presented as the original source.
+`archive/` contains on-chain evidence and an observed interface snapshot. It does not contain a verified copy of the original Solidity source.
+
+## Terminology
+
+Use the following terms accurately:
+
+- **On-chain evidence**: data directly captured from Ethereum or a reproducible RPC call.
+- **Observed ABI**: an interface representation used to call known functions.
+- **Behavioral reconstruction**: code written to reproduce observed behavior.
+- **Bytecode-matched reconstruction**: candidate source and compiler settings that produce matching bytecode.
+- **Original source**: the actual source files used by the original deployer; this requires provenance beyond a similar behavior or partial bytecode match.
+
+## Current evidence
+
+- Runtime bytecode: captured in `archive/runtime-bytecode.hex`.
+- Creation input: captured in `archive/creation-input.hex`.
+- Read values: captured in `archive/rpc-reads.json`.
+- Interface: stored as an observed ABI snapshot in `archive/abi.json`.
+
+## Do not claim yet
+
+```text
+The exact original Solidity source has been recovered.
+The publisher is definitively the historical author.
+The token has guaranteed value.
+A Polygon contract is the same contract as the Ethereum contract.
+```
+
+## Future verification work
+
+1. Obtain the exact creation input and runtime bytecode from independent RPC endpoints.
+2. Compare bytecode byte-for-byte.
+3. Investigate compiler version, optimizer settings, metadata hash, and constructor arguments.
+4. Reproduce runtime bytecode from a candidate source.
+5. Record every compiler setting and comparison result.
+6. Label any result as a reconstruction unless original provenance is independently established.

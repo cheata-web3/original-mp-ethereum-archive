@@ -30,13 +30,16 @@ The original contract remains on Ethereum Mainnet. This repository does not modi
 - [RPC and archive manifest](archive/ethereum-mainnet.json)
 - [Creation transaction](archive/creation-transaction.json)
 - [Creation receipt](archive/creation-receipt.json)
+- [Creation block](archive/block.json)
 - [Creation input](archive/creation-input.hex)
 - [Runtime bytecode](archive/runtime-bytecode.hex)
 - [RPC reads](archive/rpc-reads.json)
+- [Observed ABI snapshot](archive/abi.json) (not proof of original source)
 - [SHA-256 manifest](archive/hashes.txt)
 - [Reconstruction status](docs/reconstruction-status.md)
+- [License status](LICENSE-STATUS.md)
 - [History (日本語)](docs/history.md)
-- [Collection script](scripts/collect.py)
+- [Publication checklist](docs/publication-checklist.md)
 
 ## Independent verification
 

@@ -1,21 +1,23 @@
 {
-  "network": "Ethereum Mainnet",
+  "retrievedAt": "2026-10-01T04:36:47.469218+00:00",
+  "rpcUrl": "https://ethereum.publicnode.com",
   "chainId": 1,
-  "rpcEndpoint": "https://eth.drpc.org",
-  "contract": "0x5C5CEa5F9466D8fd9B8D9b3Bd0F4705fc4A7ae74",
+  "network": "Ethereum Mainnet",
+  "contractAddress": "0x5C5CEa5F9466D8fd9B8D9b3Bd0F4705fc4A7ae74",
+  "creator": "0x102eEe422113140FBDc2544F495a947399AB100B",
   "creationTransaction": "0x6ffb1d00e827ae77b1e1940ac52d0abb3acbc6445ae19c6e981ac1a4aebedfeb",
   "creationBlock": 5727601,
-  "creationBlockHash": "0xd60d72a58067d1b4a5761987a6a3761edb9dcf9ea4dbbbfdb736bc96cace8c9b",
-  "creationTimestamp": 1528066756,
-  "creator": "0x102eee422113140fbdc2544f495a947399ab100b",
-  "receiptContractAddress": "0x5c5cea5f9466d8fd9b8d9b3bd0f4705fc4a7ae74",
-  "readsAtBlock": 26139330,
-  "runtimeBytecodeKeccakNote": "see hashes.txt for SHA-256",
-  "files": [
-    "creation-transaction.json",
-    "creation-receipt.json",
-    "creation-input.hex",
-    "runtime-bytecode.hex",
-    "rpc-reads.json"
+  "creationTimestampUtc": "2018-06-03T22:59:16+00:00",
+  "readValues": {
+    "name": "MP",
+    "symbol": "MP",
+    "decimals": 8,
+    "totalSupplyRaw": "1000000000000000000",
+    "creatorBalanceRaw": "1000000000000000000"
+  },
+  "notes": [
+    "This export is read-only and does not use a private key.",
+    "ABI is stored as an explorer-observed interface snapshot.",
+    "Bytecode and RPC values are evidence; source-code authorship is not proven."
   ]
 }
