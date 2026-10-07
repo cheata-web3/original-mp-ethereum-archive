@@ -1,0 +1,23 @@
+{
+  "retrievedAt": "2026-10-01T04:36:47.469218+00:00",
+  "rpcUrl": "https://ethereum.publicnode.com",
+  "chainId": 1,
+  "network": "Ethereum Mainnet",
+  "contractAddress": "0x5C5CEa5F9466D8fd9B8D9b3Bd0F4705fc4A7ae74",
+  "creator": "0x102eEe422113140FBDc2544F495a947399AB100B",
+  "creationTransaction": "0x6ffb1d00e827ae77b1e1940ac52d0abb3acbc6445ae19c6e981ac1a4aebedfeb",
+  "creationBlock": 5727601,
+  "creationTimestampUtc": "2018-06-03T22:59:16+00:00",
+  "readValues": {
+    "name": "MP",
+    "symbol": "MP",
+    "decimals": 8,
+    "totalSupplyRaw": "1000000000000000000",
+    "creatorBalanceRaw": "1000000000000000000"
+  },
+  "notes": [
+    "This export is read-only and does not use a private key.",
+    "ABI is stored as an explorer-observed interface snapshot.",
+    "Bytecode and RPC values are evidence; source-code authorship is not proven."
+  ]
+}

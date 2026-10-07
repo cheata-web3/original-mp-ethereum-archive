@@ -1,0 +1,22 @@
+name: Verify archive
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: RPC facts
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          x = json.loads(Path('archive/rpc-reads.json').read_text())
+          assert x['name'] == 'MP'
+          assert x['symbol'] == 'MP'
+          assert x['decimals'] == 8
+          assert x['totalSupplyRaw'] == '1000000000000000000'
+          assert x['creatorBalanceRaw'] == '1000000000000000000'
+          print('RPC facts: PASS')
+          PY
+      - name: SHA-256
+        run: cd archive && sha256sum -c hashes.txt

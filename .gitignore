@@ -1,0 +1,7 @@
+# Local/provider metadata that should not be committed if it contains a key
+archive/rpc-url.txt
+
+# Local editor and OS files
+.DS_Store
+.env
+.env.*

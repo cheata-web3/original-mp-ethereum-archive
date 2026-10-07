@@ -1,0 +1,2 @@
+ABI is an explorer-observed interface snapshot, not proof of original source.
+Raw on-chain facts are in runtime-bytecode.hex, creation-input.hex, and rpc-reads.json.

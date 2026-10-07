@@ -1,0 +1,3 @@
+*.hex binary
+archive/*.json text diff
+archive/hashes.txt text eol=lf
