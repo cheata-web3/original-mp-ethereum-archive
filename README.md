@@ -38,7 +38,7 @@ The original contract remains on Ethereum Mainnet. This repository does not modi
 - [SHA-256 manifest](archive/hashes.txt)
 - [Reconstruction status](docs/reconstruction-status.md)
 - [License status](LICENSE-STATUS.md)
-- [History (日本語)](docs/history.md)
+- [History](docs/history.md)
 - [Publication checklist](docs/publication-checklist.md)
 
 ## Independent verification
