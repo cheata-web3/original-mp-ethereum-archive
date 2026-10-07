@@ -35,6 +35,8 @@ The original contract remains on Ethereum Mainnet. This repository does not modi
 - [RPC reads](archive/rpc-reads.json)
 - [SHA-256 manifest](archive/hashes.txt)
 - [Reconstruction status](docs/reconstruction-status.md)
+- [History (日本語)](docs/history.md)
+- [Collection script](scripts/collect.py)
 
 ## Independent verification
 
@@ -52,6 +54,10 @@ PY
 cd archive
 sha256sum -c hashes.txt
 ```
+
+## Repository contents
+
+`Cheata-Web3-Browser-fixed.zip` is a CheatA application source bundle and is not part of the on-chain evidence archive.
 
 ## Relation to CheatA
 
