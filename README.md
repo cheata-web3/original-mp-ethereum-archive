@@ -68,10 +68,6 @@ curl -sSLo soljson-v0.3.5.js https://binaries.soliditylang.org/bin/soljson-v0.3.
 node scripts/verify-source-match.js soljson-v0.3.5.js
 ```
 
-## Repository contents
-
-`Cheata-Web3-Browser-fixed.zip` is a CheatA application source bundle and is not part of the on-chain evidence archive.
-
 ## Relation to CheatA
 
 CheatA may directly read and interact with this original contract on Ethereum Mainnet. A Polygon deployment, if any, is a separate contract and is not the original MP contract.
