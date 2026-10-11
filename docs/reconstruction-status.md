@@ -2,7 +2,9 @@
 
 ## Current status
 
-`archive/` contains on-chain evidence and an observed interface snapshot. It does not contain a verified copy of the original Solidity source.
+`archive/` contains on-chain evidence and an observed interface snapshot.
+
+**Update 2026-10-11:** A bytecode-matched source has been confirmed. The `HumanStandardToken.sol` source published on Etherscan (Similar Match), compiled with solc `v0.3.5+commit.5f97274a` and optimizer 200 runs, reproduces the runtime bytecode and creation input exactly. See [etherscan-verification.md](etherscan-verification.md). Steps 1–5 of "Future verification work" are complete for this source.
 
 ## Terminology
 
@@ -24,7 +26,6 @@ Use the following terms accurately:
 ## Do not claim yet
 
 ```text
-The exact original Solidity source has been recovered.
 The publisher is definitively the historical author.
 The token has guaranteed value.
 A Polygon contract is the same contract as the Ethereum contract.

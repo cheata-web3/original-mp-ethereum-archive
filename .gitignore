@@ -5,3 +5,4 @@ archive/rpc-url.txt
 .DS_Store
 .env
 .env.*
+soljson-*.js

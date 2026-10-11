@@ -1,0 +1,18 @@
+{
+  "retrievedAt": "2026-10-11T16:04:13Z",
+  "page": "https://etherscan.io/address/0x5C5CEa5F9466D8fd9B8D9b3Bd0F4705fc4A7ae74#code",
+  "status": "Source Code Verified (Similar Match)",
+  "similarMatchAddress": "0xf77089f2F00fca83501705b711Cbb10a0De77628",
+  "similarMatchPage": "https://etherscan.io/address/0xf77089f2F00fca83501705b711Cbb10a0De77628#code",
+  "etherscanTooltip": "This contract's deployed bytecode matches the source code for 0xf77089f2F00fca83501705b711Cbb10a0De77628. Source code verification does not imply the contract is safe to interact with.",
+  "constructorWarning": "The Constructor Arguments of this contract may differ from the similar-matched contract thereby altering its behavior.",
+  "contractName": "HumanStandardToken",
+  "compilerVersion": "v0.3.5+commit.5f97274",
+  "optimization": "Yes with 200 runs",
+  "license": "-NA-",
+  "tokenTracker": "ERC-20: MP (MP)",
+  "maxTotalSupply": "10,000,000,000 MP",
+  "decimals": 8,
+  "holdersShown": 0,
+  "securityAudit": "No Contract Security Audit Submitted"
+}

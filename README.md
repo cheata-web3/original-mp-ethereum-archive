@@ -18,6 +18,10 @@
 | Total supply | `10,000,000,000 MP` |
 | Creator address | `0x102eEe422113140FBDc2544F495a947399AB100B` |
 
+## Source verification
+
+Etherscan shows this contract as **Source Code Verified (Similar Match)**. Compiling the published `HumanStandardToken.sol` with solc `v0.3.5+commit.5f97274a` (optimizer on, 200 runs) reproduces the on-chain runtime bytecode and creation input exactly. See [Etherscan verification evidence](docs/etherscan-verification.md) (日本語の説明あり).
+
 ## Purpose
 
 This repository preserves publicly observable facts about the original MP contract, including RPC responses, transaction data, runtime bytecode, and integrity hashes.
@@ -36,6 +40,7 @@ The original contract remains on Ethereum Mainnet. This repository does not modi
 - [RPC reads](archive/rpc-reads.json)
 - [Observed ABI snapshot](archive/abi.json) (not proof of original source)
 - [SHA-256 manifest](archive/hashes.txt)
+- [Etherscan source verification evidence](docs/etherscan-verification.md)
 - [Reconstruction status](docs/reconstruction-status.md)
 - [License status](LICENSE-STATUS.md)
 - [History](docs/history.md)
@@ -56,6 +61,11 @@ PY
 
 cd archive
 sha256sum -c hashes.txt
+
+# Source match (requires Node.js)
+cd ..
+curl -sSLo soljson-v0.3.5.js https://binaries.soliditylang.org/bin/soljson-v0.3.5+commit.5f97274a.js
+node scripts/verify-source-match.js soljson-v0.3.5.js
 ```
 
 ## Repository contents
@@ -72,4 +82,4 @@ This repository is technical and historical documentation. It is not investment 
 
 ## License and source status
 
-The original source-code authorship and license status have not been established by this archive. Do not treat `abi.json`, reconstructed Solidity-like code, or bytecode analysis as proof of the original source text.
+The original source-code authorship and license status have not been established by this archive. A bytecode-exact source match is documented in [docs/etherscan-verification.md](docs/etherscan-verification.md). It shows the deployed code was compiled from the published `HumanStandardToken` source; it does not establish who wrote that source or its license.

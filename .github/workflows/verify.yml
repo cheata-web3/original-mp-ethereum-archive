@@ -20,3 +20,8 @@ jobs:
           PY
       - name: SHA-256
         run: cd archive && sha256sum -c hashes.txt
+      - name: Source match (Etherscan source -> on-chain bytecode)
+        run: |
+          curl -sSLo soljson-v0.3.5.js https://binaries.soliditylang.org/bin/soljson-v0.3.5+commit.5f97274a.js
+          node scripts/verify-source-match.js soljson-v0.3.5.js
+          cd verification/etherscan-source-match && sha256sum -c hashes.txt

@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-11T16:05:00Z",
+  "method": "eth_getCode(address, latest)",
+  "runtimeHexLength": 3510,
+  "sha256OfHexString": "e67aeee8a07ff39d (prefix; full value in hashes.txt for archive/runtime-bytecode.hex)",
+  "results": [
+    {"address": "0x5C5CEa5F9466D8fd9B8D9b3Bd0F4705fc4A7ae74", "rpc": "https://ethereum.publicnode.com", "matchesArchive": true},
+    {"address": "0x5C5CEa5F9466D8fd9B8D9b3Bd0F4705fc4A7ae74", "rpc": "https://eth.drpc.org", "matchesArchive": true},
+    {"address": "0x5C5CEa5F9466D8fd9B8D9b3Bd0F4705fc4A7ae74", "rpc": "https://rpc.flashbots.net", "matchesArchive": true},
+    {"address": "0x5C5CEa5F9466D8fd9B8D9b3Bd0F4705fc4A7ae74", "rpc": "https://eth-mainnet.public.blastapi.io", "matchesArchive": true},
+    {"address": "0xf77089f2F00fca83501705b711Cbb10a0De77628", "rpc": "https://ethereum.publicnode.com", "matchesArchive": true}
+  ]
+}

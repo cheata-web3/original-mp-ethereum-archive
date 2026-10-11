@@ -1,0 +1,11 @@
+{
+  "compiler": "soljson-v0.3.5+commit.5f97274a.js",
+  "compilerSource": "https://binaries.soliditylang.org/bin/soljson-v0.3.5+commit.5f97274a.js",
+  "compilerSha256": "3af892fabc38b975b96a242b13e0b6465d9c09f505ea11932c60b982c0d37705",
+  "compilerKeccak256": "814bf4e5eacbb1849ea12377f5935b1fd846ff1af5ffa2afeef2619f94273994",
+  "compilerListing": "https://binaries.soliditylang.org/bin/list.json",
+  "optimizer": true,
+  "optimizerRuns": 200,
+  "contractName": "HumanStandardToken",
+  "sourceFile": "HumanStandardToken.sol"
+}
