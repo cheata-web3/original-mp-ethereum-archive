@@ -13,7 +13,7 @@ jobs:
           x = json.loads(Path('archive/rpc-reads.json').read_text())
           assert x['name'] == 'MP'
           assert x['symbol'] == 'MP'
-          assert x['decimals'] == 8
+          assert x['decimals'] == 18
           assert x['totalSupplyRaw'] == '1000000000000000000'
           assert x['creatorBalanceRaw'] == '1000000000000000000'
           print('RPC facts: PASS')
