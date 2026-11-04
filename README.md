@@ -14,7 +14,7 @@
 | Creation timestamp | `2018-06-03 22:59:16 UTC` |
 | Name | `MP` |
 | Symbol | `MP` |
-| Decimals | `8` |
+| Decimals | `18` |
 | Total supply | `10,000,000,000 MP` |
 | Creator address | `0x102eEe422113140FBDc2544F495a947399AB100B` |
 
