@@ -6,3 +6,5 @@ archive/rpc-url.txt
 .env
 .env.*
 soljson-*.js
+node_modules/
+provenance/draft-*.json

@@ -1,27 +1,33 @@
 name: Verify archive
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: RPC facts
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Archived facts and documentation consistency
+        run: node scripts/verify-archive.js
+      - name: Creator-proof tooling tests (not proof of creator control)
         run: |
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          x = json.loads(Path('archive/rpc-reads.json').read_text())
-          assert x['name'] == 'MP'
-          assert x['symbol'] == 'MP'
-          assert x['decimals'] == 18
-          assert x['totalSupplyRaw'] == '1000000000000000000'
-          assert x['creatorBalanceRaw'] == '1000000000000000000'
-          print('RPC facts: PASS')
-          PY
+          npm ci --ignore-scripts
+          npm test
+      - name: Verify creator proof if published
+        run: |
+          if [ -f provenance/creator-proof.json ]; then
+            node scripts/creator-proof.js verify provenance/creator-proof.json
+          else
+            echo 'PENDING: no creator-wallet signature has been published.'
+          fi
       - name: SHA-256
         run: cd archive && sha256sum -c hashes.txt
       - name: Source match (Etherscan source -> on-chain bytecode)
         run: |
-          curl -sSLo soljson-v0.3.5.js https://binaries.soliditylang.org/bin/soljson-v0.3.5+commit.5f97274a.js
+          curl --fail --location --silent --show-error -o soljson-v0.3.5.js https://binaries.soliditylang.org/bin/soljson-v0.3.5+commit.5f97274a.js
           node scripts/verify-source-match.js soljson-v0.3.5.js
           cd verification/etherscan-source-match && sha256sum -c hashes.txt

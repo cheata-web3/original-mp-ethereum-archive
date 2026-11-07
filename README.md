@@ -14,7 +14,7 @@
 | Creation timestamp | `2018-06-03 22:59:16 UTC` |
 | Name | `MP` |
 | Symbol | `MP` |
-| Decimals | `18` |
+| Decimals | `8` |
 | Total supply | `10,000,000,000 MP` |
 | Creator address | `0x102eEe422113140FBDc2544F495a947399AB100B` |
 
@@ -29,6 +29,10 @@ This repository preserves publicly observable facts about the original MP contra
 The original contract remains on Ethereum Mainnet. This repository does not modify it and does not deploy a replacement contract.
 
 ## Evidence
+
+Start with the [creator-proof guide (日本語)](docs/creator-proof.ja.md).
+Creator-wallet signature verification is **pending**; this archive does not yet
+establish that its publisher controls the deployment address.
 
 - [Provenance record](PROVENANCE.md)
 - [RPC and archive manifest](archive/ethereum-mainnet.json)
@@ -49,23 +53,18 @@ The original contract remains on Ethereum Mainnet. This repository does not modi
 ## Independent verification
 
 ```bash
-python3 - <<'PY'
-import json
-from pathlib import Path
-x = json.loads(Path('archive/rpc-reads.json').read_text())
-assert x['name'] == 'MP'
-assert x['symbol'] == 'MP'
-assert x['decimals'] == 8
-print('RPC facts: PASS')
-PY
+node scripts/verify-archive.js
 
-cd archive
-sha256sum -c hashes.txt
+(cd archive && sha256sum -c hashes.txt)
+(cd verification/etherscan-source-match && sha256sum -c hashes.txt)
 
 # Source match (requires Node.js)
-cd ..
-curl -sSLo soljson-v0.3.5.js https://binaries.soliditylang.org/bin/soljson-v0.3.5+commit.5f97274a.js
+curl --fail --location --silent --show-error -o soljson-v0.3.5.js https://binaries.soliditylang.org/bin/soljson-v0.3.5+commit.5f97274a.js
 node scripts/verify-source-match.js soljson-v0.3.5.js
+
+# Creator-proof tooling tests (not an actual creator signature)
+npm ci --ignore-scripts
+npm test
 ```
 
 ## Relation to CheatA

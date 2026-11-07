@@ -60,6 +60,11 @@ The archive alone does not prove:
 
 ## Ownership statement
 
+**Status: pending.** No verified creator-wallet signature is included.
+Follow the [creator-proof guide](docs/creator-proof.ja.md) to prepare and verify
+a narrowly scoped public attestation. Passing archive CI is not a substitute
+for a creator signature.
+
 Replace this section only after completing a wallet-signature verification:
 
 ```text
@@ -73,5 +78,5 @@ it does not alter the contract or guarantee any economic value.
 
 - Captured at: `2026-10-01T04:36:47Z` (see `archive/retrieved-at.txt`)
 - RPC provider hostname: `ethereum.publicnode.com`
-- Script version or commit: `[commit hash]`
-- Archive release: `[v1.0.0]`
+- Capture script version or commit: not recorded in the original capture metadata.
+- Archive release: no release published as of the 2026-11-07 review.
