@@ -1,0 +1,13 @@
+{
+  "name": "original-mp-archive-verification",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Read-only archive and creator-attestation verification",
+  "scripts": {
+    "test": "node --test scripts/creator-proof.test.js",
+    "verify:archive": "node scripts/verify-archive.js"
+  },
+  "dependencies": {
+    "ethers": "6.17.0"
+  }
+}
