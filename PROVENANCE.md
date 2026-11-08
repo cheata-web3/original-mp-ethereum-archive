@@ -60,14 +60,9 @@ The archive alone does not prove:
 
 ## Ownership statement
 
-Replace this section only after completing a wallet-signature verification:
+On 2026-11-08, a message was signed with the key of the creator address `0x102eEe422113140FBDc2544F495a947399AB100B`. The message, signature, and recovery steps are in [`provenance/wallet-signature.md`](provenance/wallet-signature.md); the signer was recovered locally and matches the creator address.
 
-```text
-The publisher claims control of the creator address only if the signed
-message and independently recoverable signature are included under
-provenance/. A signature proves control of a public address at signing time;
-it does not alter the contract or guarantee any economic value.
-```
+A signature proves control of a public address at signing time; it does not prove legal identity or authorship of the original source, does not alter the contract, and does not guarantee any economic value.
 
 ## Capture metadata
 
