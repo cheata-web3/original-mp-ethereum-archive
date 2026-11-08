@@ -30,6 +30,10 @@ The original contract remains on Ethereum Mainnet. This repository does not modi
 
 ## Evidence
 
+See the [wallet-signature record](provenance/wallet-signature.md) for a locally
+recovered creator-address signature. The separate JSON attestation described in
+the [creator-proof guide (日本語)](docs/creator-proof.ja.md) is not published.
+
 - [Provenance record](PROVENANCE.md)
 - [RPC and archive manifest](archive/ethereum-mainnet.json)
 - [Creation transaction](archive/creation-transaction.json)
@@ -55,23 +59,18 @@ This is a historical record based on public on-chain data and archived RPC resul
 ## Independent verification
 
 ```bash
-python3 - <<'PY'
-import json
-from pathlib import Path
-x = json.loads(Path('archive/rpc-reads.json').read_text())
-assert x['name'] == 'MP'
-assert x['symbol'] == 'MP'
-assert x['decimals'] == 8
-print('RPC facts: PASS')
-PY
+node scripts/verify-archive.js
 
-cd archive
-sha256sum -c hashes.txt
+(cd archive && sha256sum -c hashes.txt)
+(cd verification/etherscan-source-match && sha256sum -c hashes.txt)
 
 # Source match (requires Node.js)
-cd ..
-curl -sSLo soljson-v0.3.5.js https://binaries.soliditylang.org/bin/soljson-v0.3.5+commit.5f97274a.js
+curl --fail --location --silent --show-error -o soljson-v0.3.5.js https://binaries.soliditylang.org/bin/soljson-v0.3.5+commit.5f97274a.js
 node scripts/verify-source-match.js soljson-v0.3.5.js
+
+# Creator-proof tooling tests (not an actual creator signature)
+npm ci --ignore-scripts
+npm test
 ```
 
 ## Relation to CheatA
