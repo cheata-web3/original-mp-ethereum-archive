@@ -30,9 +30,9 @@ The original contract remains on Ethereum Mainnet. This repository does not modi
 
 ## Evidence
 
-Start with the [creator-proof guide (日本語)](docs/creator-proof.ja.md).
-Creator-wallet signature verification is **pending**; this archive does not yet
-establish that its publisher controls the deployment address.
+See the [wallet-signature record](provenance/wallet-signature.md) for a locally
+recovered creator-address signature. The separate JSON attestation described in
+the [creator-proof guide (日本語)](docs/creator-proof.ja.md) is not published.
 
 - [Provenance record](PROVENANCE.md)
 - [RPC and archive manifest](archive/ethereum-mainnet.json)
@@ -47,8 +47,14 @@ establish that its publisher controls the deployment address.
 - [Etherscan source verification evidence](docs/etherscan-verification.md)
 - [Reconstruction status](docs/reconstruction-status.md)
 - [License status](LICENSE-STATUS.md)
-- [History](docs/history.md)
 - [Publication checklist](docs/publication-checklist.md)
+
+## History
+
+- 2018-06-03 22:59:16 UTC — The MP contract was created in Ethereum Mainnet block `5,727,601` (creator `0x102eEe422113140FBDc2544F495a947399AB100B`).
+- Name `MP`, symbol `MP`, decimals `8`, total supply `10,000,000,000 MP`.
+
+This is a historical record based on public on-chain data and archived RPC results. See [PROVENANCE.md](PROVENANCE.md) and [archive/](archive/) for details.
 
 ## Independent verification
 
