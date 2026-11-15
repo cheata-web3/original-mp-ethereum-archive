@@ -60,19 +60,14 @@ The archive alone does not prove:
 
 ## Ownership statement
 
-**Status: pending.** No verified creator-wallet signature is included.
-Follow the [creator-proof guide](docs/creator-proof.ja.md) to prepare and verify
-a narrowly scoped public attestation. Passing archive CI is not a substitute
-for a creator signature.
+**Status: verified.** A creator-wallet EIP-191 signature over a narrowly scoped
+public attestation is published in [provenance/creator-proof.json](provenance/creator-proof.json).
+Verification recovers the creator address `0x102eEe422113140FBDc2544F495a947399AB100B`
+(`node scripts/creator-proof.js verify provenance/creator-proof.json`, also enforced by CI).
 
-Replace this section only after completing a wallet-signature verification:
-
-```text
-The publisher claims control of the creator address only if the signed
-message and independently recoverable signature are included under
-provenance/. A signature proves control of a public address at signing time;
-it does not alter the contract or guarantee any economic value.
-```
+Scope of this evidence: the signer controlled the creator address at signing time.
+It does not establish legal identity, continuous historical control, or original
+source-code authorship. The declared signing time inside the message is self-reported.
 
 ## Capture metadata
 

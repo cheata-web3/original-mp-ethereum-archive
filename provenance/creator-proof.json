@@ -1,0 +1,8 @@
+{
+  "schema": "mp-creator-control-v1",
+  "archiveManifestSha256": "d4a10888325d642b5e7352387b0329e7295694a3b2ad0987cc3e76660aa06942",
+  "declaredSigningTime": "2026-11-07T09:17:11.656Z",
+  "nonce": "863af51da6ba3e0714ec9b6e4a4b4912312e5626689b26fbf1a4fca0209b64df",
+  "message": "MP creator-address control attestation v1\nRepository: https://github.com/cheata-web3/original-mp-ethereum-archive\nPublisher account claimed by signer: cheata-web3\nNetwork: Ethereum Mainnet (chain ID 1)\nContract: 0x5C5CEa5F9466D8fd9B8D9b3Bd0F4705fc4A7ae74\nCreation transaction: 0x6ffb1d00e827ae77b1e1940ac52d0abb3acbc6445ae19c6e981ac1a4aebedfeb\nCreator address: 0x102eEe422113140FBDc2544F495a947399AB100B\nArchive hashes.txt SHA-256: d4a10888325d642b5e7352387b0329e7295694a3b2ad0987cc3e76660aa06942\nDeclared signing time (not independently timestamped): 2026-11-07T09:17:11.656Z\nNonce: 863af51da6ba3e0714ec9b6e4a4b4912312e5626689b26fbf1a4fca0209b64df\nI attest that I currently control the creator address identified above.\nI associate this attestation with the named repository and publisher account.\nThis is a public provenance statement only, not a login, transaction, permit, approval, delegation, or transfer authorization.\nThis signature alone does not establish my legal identity, historical control, or original source-code authorship.",
+  "signature": "0xfd4ba0303c6f0c0e5f9a62d080190db247dc58c3246d79f08d1453269f4cb1d510d5100bed289c3742f3274c1732a6f5d30a429139d2b3014082194f6e7fcd111b"
+}

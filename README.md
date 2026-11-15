@@ -31,8 +31,10 @@ The original contract remains on Ethereum Mainnet. This repository does not modi
 ## Evidence
 
 Start with the [creator-proof guide (日本語)](docs/creator-proof.ja.md).
-Creator-wallet signature verification is **pending**; this archive does not yet
-establish that its publisher controls the deployment address.
+Creator-wallet signature verification is **complete**: the published signature
+in [provenance/creator-proof.json](provenance/creator-proof.json) recovers the
+creator address `0x102eEe422113140FBDc2544F495a947399AB100B`. This is
+address-control evidence only, not legal identity or authorship certification.
 
 - [Provenance record](PROVENANCE.md)
 - [RPC and archive manifest](archive/ethereum-mainnet.json)

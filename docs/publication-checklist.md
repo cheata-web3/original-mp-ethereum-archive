@@ -19,7 +19,7 @@
 - [ ] No RPC API key in `rpc-url.txt` or committed files.
 - [ ] No unnecessary personal address, email, or workplace information.
 - [ ] Signed message is included only if intentionally public.
-- [ ] Creator proof is marked pending unless its actual signature passes verification.
+- [x] Creator proof signature passes verification and is published under `provenance/` (CI-enforced).
 - [ ] A successful CI run is not described as proof of the publisher's identity.
 
 ## Wording
