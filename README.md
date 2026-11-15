@@ -30,9 +30,13 @@ The original contract remains on Ethereum Mainnet. This repository does not modi
 
 ## Evidence
 
-See the [wallet-signature record](provenance/wallet-signature.md) for a locally
-recovered creator-address signature. The separate JSON attestation described in
-the [creator-proof guide (日本語)](docs/creator-proof.ja.md) is not published.
+Start with the [creator-proof guide (日本語)](docs/creator-proof.ja.md).
+Creator-wallet signature verification is **complete**: the published signature
+in [provenance/creator-proof.json](provenance/creator-proof.json) recovers the
+creator address `0x102eEe422113140FBDc2544F495a947399AB100B`, and the earlier
+[wallet-signature record](provenance/wallet-signature.md) recovers the same
+address. This is address-control evidence only, not legal identity or
+authorship certification.
 
 - [Provenance record](PROVENANCE.md)
 - [RPC and archive manifest](archive/ethereum-mainnet.json)
@@ -68,9 +72,10 @@ node scripts/verify-archive.js
 curl --fail --location --silent --show-error -o soljson-v0.3.5.js https://binaries.soliditylang.org/bin/soljson-v0.3.5+commit.5f97274a.js
 node scripts/verify-source-match.js soljson-v0.3.5.js
 
-# Creator-proof tooling tests (not an actual creator signature)
+# Creator-proof tooling tests and the published attestation
 npm ci --ignore-scripts
 npm test
+node scripts/creator-proof.js verify provenance/creator-proof.json
 ```
 
 ## Relation to CheatA

@@ -60,9 +60,19 @@ The archive alone does not prove:
 
 ## Ownership statement
 
-The message, signature, and recovery steps are in [`provenance/wallet-signature.md`](provenance/wallet-signature.md); the signer was recovered locally and matches the creator address `0x102eEe422113140FBDc2544F495a947399AB100B`. The message claims the date 2026-11-08; the signature does not independently establish when it was signed.
+**Status: verified (two independent records).**
 
-A signature shows control of the key when it was signed; it does not prove legal identity or authorship of the original source, does not alter the contract, and does not guarantee any economic value. The separate JSON attestation described in the [creator-proof guide](docs/creator-proof.ja.md) has not been published.
+1. [provenance/creator-proof.json](provenance/creator-proof.json) — the scoped JSON
+   attestation. Verification recovers the creator address
+   `0x102eEe422113140FBDc2544F495a947399AB100B`
+   (`node scripts/creator-proof.js verify provenance/creator-proof.json`, enforced by CI).
+2. [provenance/wallet-signature.md](provenance/wallet-signature.md) — the short signed
+   message from 2026-11-08 (`signed-message.txt`, `signature.txt`), recovered locally
+   with the same result.
+
+Scope of this evidence: the signers controlled the creator address at signing time.
+Neither record establishes legal identity, continuous historical control, or original
+source-code authorship. The signing dates inside the messages are self-reported.
 
 ## Capture metadata
 
