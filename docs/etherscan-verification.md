@@ -20,6 +20,10 @@ Similar Match は、Etherscan が「このコントラクトの bytecode は、�
 
 `HumanStandardToken` のコンストラクタは、作成者に全量を割り当てるときに `Transfer` イベントを出しません。Etherscan はイベントから保有者を数えるため、Holders は 0 と表示されます。RPC で読み取った作成者アドレス `0x102eEe422113140FBDc2544F495a947399AB100B` の残高は `1000000000000000000`（全量）です（[`archive/rpc-reads.json`](../archive/rpc-reads.json)）。
 
+### コンパイラのバージョン警告について
+
+Etherscan には「Compiler specific version warnings」として、solc v0.3.5 に関する既知のコンパイラバグの一覧が表示されます。これはコンパイラのバージョンに対する機械的な警告で、このコントラクトが実際に影響を受けるかどうかは、このリポジトリでは個別に確認していません。安全とも危険とも主張しません。
+
 ### この証拠で言えること・言えないこと
 
 | 言えること | 言えないこと |

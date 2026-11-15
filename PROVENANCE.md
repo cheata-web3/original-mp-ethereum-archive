@@ -60,14 +60,19 @@ The archive alone does not prove:
 
 ## Ownership statement
 
-**Status: verified.** A creator-wallet EIP-191 signature over a narrowly scoped
-public attestation is published in [provenance/creator-proof.json](provenance/creator-proof.json).
-Verification recovers the creator address `0x102eEe422113140FBDc2544F495a947399AB100B`
-(`node scripts/creator-proof.js verify provenance/creator-proof.json`, also enforced by CI).
+**Status: verified (two independent records).**
 
-Scope of this evidence: the signer controlled the creator address at signing time.
-It does not establish legal identity, continuous historical control, or original
-source-code authorship. The declared signing time inside the message is self-reported.
+1. [provenance/creator-proof.json](provenance/creator-proof.json) — the scoped JSON
+   attestation. Verification recovers the creator address
+   `0x102eEe422113140FBDc2544F495a947399AB100B`
+   (`node scripts/creator-proof.js verify provenance/creator-proof.json`, enforced by CI).
+2. [provenance/wallet-signature.md](provenance/wallet-signature.md) — the short signed
+   message from 2026-11-08 (`signed-message.txt`, `signature.txt`), recovered locally
+   with the same result.
+
+Scope of this evidence: the signers controlled the creator address at signing time.
+Neither record establishes legal identity, continuous historical control, or original
+source-code authorship. The signing dates inside the messages are self-reported.
 
 ## Capture metadata
 

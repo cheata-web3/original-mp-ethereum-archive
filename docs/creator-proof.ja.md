@@ -1,6 +1,6 @@
 # MPの作成者証明と確認手順
 
-この資料は、MPを作成したアドレスと発信者を結び付けるための手順です。**現在の状態: 検証済み。** [provenance/creator-proof.json](../provenance/creator-proof.json) の公開署名から復元したアドレスは、MP作成者アドレス `0x102eEe422113140FBDc2544F495a947399AB100B` と一致しています（CIでも毎回再検証されます）。
+この資料は、MPを作成したアドレスと発信者を結び付けるための手順です。**現在の状態: 検証済み。** [provenance/creator-proof.json](../provenance/creator-proof.json) の公開署名から復元したアドレスは、MP作成者アドレス `0x102eEe422113140FBDc2544F495a947399AB100B` と一致しています（CIでも毎回再検証されます）。別形式の署名記録として [wallet-signature.md](../provenance/wallet-signature.md) も公開されており、同じアドレスが復元されます。
 
 ## 何が分かり、何が未確認か
 
@@ -35,7 +35,7 @@
    node scripts/creator-proof.js verify provenance/draft-creator-proof.json
    ```
 
-5. 検証成功後、署名・アドレス・GitHubとの関連付けを公開してよいか確認します。承認後にのみ `provenance/creator-proof.json` として保存し、レビューを経て公開します。READMEとPROVENANCEの「未確認」表示も、その時点で実際の検証結果に合わせて更新します。
+5. 検証成功後、署名・アドレス・GitHubとの関連付けを公開してよいか確認します。承認後にのみ `provenance/creator-proof.json` として保存し、レビューを経て公開します。READMEとPROVENANCEの表示も、その時点で実際の検証結果に合わせて更新します。
 
 このツールは検証のみを行い、ウォレット接続・秘密鍵取得・送金は行いません。EIP-191メッセージ署名の生成と復元は、プロバイダーに接続せず実施できます（[ethersの署名例](https://docs.ethers.org/v6/cookbook/signing/)）。
 

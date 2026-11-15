@@ -33,8 +33,10 @@ The original contract remains on Ethereum Mainnet. This repository does not modi
 Start with the [creator-proof guide (日本語)](docs/creator-proof.ja.md).
 Creator-wallet signature verification is **complete**: the published signature
 in [provenance/creator-proof.json](provenance/creator-proof.json) recovers the
-creator address `0x102eEe422113140FBDc2544F495a947399AB100B`. This is
-address-control evidence only, not legal identity or authorship certification.
+creator address `0x102eEe422113140FBDc2544F495a947399AB100B`, and the earlier
+[wallet-signature record](provenance/wallet-signature.md) recovers the same
+address. This is address-control evidence only, not legal identity or
+authorship certification.
 
 - [Provenance record](PROVENANCE.md)
 - [RPC and archive manifest](archive/ethereum-mainnet.json)
@@ -49,8 +51,14 @@ address-control evidence only, not legal identity or authorship certification.
 - [Etherscan source verification evidence](docs/etherscan-verification.md)
 - [Reconstruction status](docs/reconstruction-status.md)
 - [License status](LICENSE-STATUS.md)
-- [History](docs/history.md)
 - [Publication checklist](docs/publication-checklist.md)
+
+## History
+
+- 2018-06-03 22:59:16 UTC — The MP contract was created in Ethereum Mainnet block `5,727,601` (creator `0x102eEe422113140FBDc2544F495a947399AB100B`).
+- Name `MP`, symbol `MP`, decimals `8`, total supply `10,000,000,000 MP`.
+
+This is a historical record based on public on-chain data and archived RPC results. See [PROVENANCE.md](PROVENANCE.md) and [archive/](archive/) for details.
 
 ## Independent verification
 
@@ -64,9 +72,10 @@ node scripts/verify-archive.js
 curl --fail --location --silent --show-error -o soljson-v0.3.5.js https://binaries.soliditylang.org/bin/soljson-v0.3.5+commit.5f97274a.js
 node scripts/verify-source-match.js soljson-v0.3.5.js
 
-# Creator-proof tooling tests (not an actual creator signature)
+# Creator-proof tooling tests and the published attestation
 npm ci --ignore-scripts
 npm test
+node scripts/creator-proof.js verify provenance/creator-proof.json
 ```
 
 ## Relation to CheatA

@@ -22,7 +22,7 @@ jobs:
           if [ -f provenance/creator-proof.json ]; then
             node scripts/creator-proof.js verify provenance/creator-proof.json
           else
-            echo 'PENDING: no creator-wallet signature has been published.'
+            echo 'PENDING: no creator-proof.json attestation has been published.'
           fi
       - name: SHA-256
         run: cd archive && sha256sum -c hashes.txt
